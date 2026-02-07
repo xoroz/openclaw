@@ -1,3 +1,12 @@
+# 🦞 OpenClaw (Containerized Fork)
+
+> **⚠️ WORK IN PROGRESS**
+>
+> This is a fork of the original [OpenClaw](https://github.com/openclaw/openclaw) project.
+> **Full credit goes to the original authors.**
+>
+> **Objective:** Automate the setup process using Docker containers, pre-configured OpenRouter, and local Ollama integration for a seamless "one-click" deployment.
+
 # 🦞 OpenClaw — Personal AI Assistant
 
 <p align="center">
