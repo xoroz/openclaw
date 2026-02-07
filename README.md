@@ -54,6 +54,34 @@ openclaw onboard --install-daemon
 
 The wizard installs the Gateway daemon (launchd/systemd user service) so it stays running.
 
+## Docker Setup (Linux servers)
+
+For dedicated Linux servers, use the one-liner setup script:
+
+```bash
+# Basic install (creates 'openclaw' user)
+curl -sSL https://raw.githubusercontent.com/xoroz/openclaw/main/setup.sh | sudo bash -s -- --user openclaw -y
+
+# With OpenRouter API key
+curl -sSL https://raw.githubusercontent.com/xoroz/openclaw/main/setup.sh | sudo OPENROUTER_API_KEY="your-key" bash -s -- --user openclaw -y
+```
+
+After setup, switch to the openclaw user and run the test:
+
+```bash
+su - openclaw
+./test.sh        # Verify installation
+conboard         # Complete first-time setup
+```
+
+**Aliases available after setup:**
+
+- `clawd <cmd>` - Run any CLI command
+- `cb 'hello'` - Chat with agent
+- `conboard` - Run onboarding
+- `cstatus` - Check container status
+- `clog` - View logs
+
 ## Quick start (TL;DR)
 
 Runtime: **Node ≥22**.
